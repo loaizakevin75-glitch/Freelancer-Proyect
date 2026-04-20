@@ -122,7 +122,6 @@ body {
 .navbar__list {
     display: flex;
     flex-direction: column;
-   padding: 6px 0;
     width: 100%;
     margin: 0 auto;
     list-style: none;
@@ -149,4 +148,13 @@ body {
 
   }
     
+}
+
+.navbar__link.active {
+    background-color: var(--white);
+    color: var(--primary-950);
+    font-weight: bold;
+    padding: 8px 24px;
+    /* border-radius: 0.6rem; */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
