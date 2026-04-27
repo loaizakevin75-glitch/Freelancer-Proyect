@@ -15,16 +15,16 @@ document.addEventListener("DOMContentLoaded", function(){
             
             const currentPage = window.location.pathname.split("/").pop() ||
             "index.html"
-            
+
             const navlinks = navbarElement.querySelectorAll(".navbar__link");
             
             navlinks.forEach(link => {
                 // Verifica si el href del enlace incluye el nombre de la página actual
-                if (link.getAttribute("href").includes(currentPage)) {
+                if (link.getAttribute("href")?.includes(currentPage)) {
                     link.classList.add("active")
                 }
             })
-            .catch(error => console.error("Error cargando el navbar", error));
+            
         })
-
+        .catch(error => console.error("Error cargando el navbar", error));
 })
